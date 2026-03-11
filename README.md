@@ -14,7 +14,7 @@
   <a href="refenrece/agents"><img src="https://img.shields.io/badge/agents-85-blueviolet" alt="85 Agents"></a>
   <a href="refenrece/skills"><img src="https://img.shields.io/badge/skills-72-green" alt="72 Skills"></a>
   <a href="refenrece/rules"><img src="https://img.shields.io/badge/rules-12-red" alt="12 Rules"></a>
-  <a href="docs/qulification"><img src="https://img.shields.io/badge/platforms-6-orange" alt="6 Platforms"></a>
+  <a href="docs/qualification"><img src="https://img.shields.io/badge/platforms-6-orange" alt="6 Platforms"></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
   <a href="https://ko-fi.com/donchitos"><img src="https://img.shields.io/badge/Ko--fi-Support%20this%20project-ff5e5b?logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
 </p>
