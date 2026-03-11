@@ -30,6 +30,8 @@ Building a game solo with AI is powerful — but a single AI session has no stru
 ### 🌐 **Universal Architecture**
 We broke free from single-AI limitations. Our **universal reference system** (`refenrece/`) creates an AI-agnostic framework where ANY coding environment — Claude Code, Cursor, Windsurf, or future AI agents — can access the same complete studio infrastructure. You're never locked into one platform.
 
+**Advanced Development Layer**: We've integrated **BMAD + OpenSpec + Harness** methodologies into our `.codex/` folder, creating a sophisticated development framework that brings enterprise-grade workflow management to ANY AI IDE. This includes Quick/BMM modes, task decomposition, milestone validation, and automated quality gates — all portable across AI platforms.
+
 ### 🏗️ **Enterprise-Grade Coordination**  
 We scaled from basic agent assistance to a full studio architecture. While others offer simple chatbots, we provide **85 specialized agents** organized into **9 professional teams** with real studio hierarchies: executive leadership, department heads, specialists, and quality gates. This isn't just assistance — it's a complete production pipeline.
 
@@ -66,6 +68,7 @@ The result: you choose your preferred AI environment, we provide the complete st
 | **Templates** | 28 | Document templates for GDDs, ADRs, sprint plans, economy models, faction design, and more |
 | **Platforms** | 6 | Quality standards and certification for Steam, Mobile, Console, Epic Games Store, and Browser platforms |
 | **Universal Reference System** | 1 | Core architecture that enables ANY AI IDE/agent to become a full game studio |
+| **Advanced Development Layer** | 1 | BMAD + OpenSpec + Harness integration for enterprise-grade workflow management across all AI platforms |
 
 ## Universal Reference System
 
@@ -240,6 +243,14 @@ refenrece/                          # 🌟 UNIVERSAL REFERENCE SYSTEM - Core Arc
   skills/                          # 72 universal skill implementations (AI-agnostic)
   rules/                           # 12 coding standards and quality rules
   docs/                            # Comprehensive documentation for all AI platforms
+
+.codex/                             # 🚀 ADVANCED DEVELOPMENT LAYER - BMAD+OpenSpec+Harness
+  workflows/                       # Quick/BMM modes, review, validation, archive workflows
+  core/                            # Task decomposition, milestone design, quality gates
+  templates/                        # Reusable scaffolds for consistent development
+  reference/                        # BMAD/OpenSpec methodology references
+  PROJECT-RULES.md                 # Cross-platform development conventions
+  LESSONS-LEARNED.md               # Project-specific insights and patterns
 
 src/                                # Game source code
 assets/                             # Art, audio, VFX, shaders, data files
