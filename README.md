@@ -1,9 +1,9 @@
 <p align="center">
-  <h1 align="center">OpenAgenticGame Studios- Agent First Game Dev AI Game Studios</h1>
+  <h1 align="center">OpenAgenticGame Studios - Universal Agent First Game Dev AI Game Studios</h1>
   <p align="center">
-    Turn any ai coding ide into a full game development studio.
+    Transform any AI coding IDE/agent into a full game development studio.
     <br />
-    85 agents. 72 skills. 9 teams. One coordinated AI team.
+    85 agents. 72 skills. 9 teams. Universal agent coordination system.
   </p>
 </p>
 
@@ -23,11 +23,13 @@
 
 ## Why This Exists
 
-Building a game solo with AI is powerful — but a single chat session has no structure. No one stops you from hardcoding magic numbers, skipping design docs, or writing spaghetti code. There's no QA pass, no design review, no one asking "does this actually fit the game's vision?"
+Building a game solo with AI is powerful — but a single AI session has no structure. No one stops you from hardcoding magic numbers, skipping design docs, or writing spaghetti code. There's no QA pass, no design review, no one asking "does this actually fit the game's vision?"
 
-**OpenAgenticGame - Agent First Game Dev AI Game Studios** solves this by giving your AI session the structure of a real studio. Instead of one general-purpose assistant, you get 85 specialized agents organized into 9 teams — directors who guard the vision, department leads who own their domains, specialists who do the hands-on work, and publishing experts who handle platform submission and certification. Each agent has defined responsibilities, escalation paths, and quality gates.
+**OpenAgenticGame Studios - Universal Agent First Game Dev AI Game Studios** solves this by providing a universal framework that transforms ANY AI coding IDE or agent into a structured game development studio. Instead of being limited to Claude Code, our reference-based architecture allows any AI system — whether it's Claude, Cursor, Windsurf, or future AI agents — to access the same 85 specialized agents organized into 9 teams.
 
-The result: you still make every decision, but now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first brainstorm to launch.
+At the core is our **universal reference system** (`refenrece/`) that contains all agent definitions, skills, rules, and quality standards. Any AI agent that can access these references becomes a full-featured game development studio with directors who guard the vision, department leads who own their domains, specialists who do the hands-on work, and publishing experts who handle platform submission and certification.
+
+The result: you can use your preferred AI coding environment while still having a complete studio structure that asks the right questions, catches mistakes early, and keeps your project organized from first brainstorm to launch.
 
 ---
 
@@ -52,10 +54,38 @@ The result: you still make every decision, but now you have a team that asks the
 | Category | Count | Description |
 |----------|-------|-------------|
 | **Agents** | 85 | Specialized subagents across 9 teams: Leadership, Programming, Design, Art, QA, Production, Publish, Support, and Enhanced |
-| **Skills** | 72 | Slash commands for common workflows (`/start`, `/sprint-plan`, `/code-review`, `/brainstorm`, etc.) |
+| **Skills** | 72 | Universal slash commands for common workflows (`/start`, `/sprint-plan`, `/code-review`, `/brainstorm`, etc.) |
 | **Rules** | 12 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
 | **Templates** | 28 | Document templates for GDDs, ADRs, sprint plans, economy models, faction design, and more |
 | **Platforms** | 6 | Quality standards and certification for Steam, Mobile, Console, Epic Games Store, and Browser platforms |
+| **Universal Reference System** | 1 | Core architecture that enables ANY AI IDE/agent to become a full game studio |
+
+## Universal Reference System
+
+The core innovation of OpenAgenticGame Studios is our **universal reference system** located in the `refenrece/` directory. This architecture enables any AI coding IDE or agent to become a full-featured game development studio:
+
+### How It Works
+- **Reference-Based Architecture**: All agents, skills, rules, and quality standards are stored as accessible reference files
+- **AI-Agnostic Design**: Any AI system that can read files can access the complete studio framework
+- **Unified Knowledge Base**: Consistent agent behavior and quality standards across all AI platforms
+- **Extensible Framework**: Easy to add new agents, skills, or integrate with new AI systems
+
+### Supported AI Environments
+- **Claude Code** (原生支持)
+- **Cursor** (通过参考系统)
+- **Windsurf** (通过参考系统)
+- **Any future AI coding IDE** (通过通用参考架构)
+
+### Reference Structure
+```
+refenrece/
+├── agents/     # 85 specialized agent definitions
+├── skills/      # 72 universal skill implementations  
+├── rules/       # 12 coding standards and quality rules
+└── docs/        # Comprehensive documentation
+```
+
+This means you're not locked into a specific AI platform — your studio structure and expertise travels with you, regardless of which AI coding environment you prefer.
 
 ## Studio Hierarchy
 
@@ -185,10 +215,10 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
 
 ```
 CLAUDE.md                           # Master configuration
-.claude/
+.claude/                            # Claude Code specific configurations
   settings.json                     # Hooks, permissions, safety rules
-  agents/                           # 48 agent definitions (markdown + YAML frontmatter)
-  skills/                           # 36 slash commands (subdirectory per skill)
+  agents/                           # 85 agent definitions (markdown + YAML frontmatter)
+  skills/                           # 72 slash commands (subdirectory per skill)
   hooks/                            # 8 hook scripts (bash, cross-platform)
   rules/                            # 11 path-scoped coding standards
   docs/
@@ -197,6 +227,13 @@ CLAUDE.md                           # Master configuration
     agent-coordination-map.md       # Delegation and escalation paths
     setup-requirements.md           # Prerequisites and platform notes
     templates/                      # 28 document templates
+
+refenrece/                          # 🌟 UNIVERSAL REFERENCE SYSTEM - Core Architecture
+  agents/                          # 85 specialized agent definitions (AI-agnostic)
+  skills/                          # 72 universal skill implementations (AI-agnostic)
+  rules/                           # 12 coding standards and quality rules
+  docs/                            # Comprehensive documentation for all AI platforms
+
 src/                                # Game source code
 assets/                             # Art, audio, VFX, shaders, data files
 design/                             # GDDs, narrative docs, level designs

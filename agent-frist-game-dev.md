@@ -1,7 +1,6 @@
-# OpenAgenticGame Studios - Agent First Game Dev AI Game Studios
+# OpenAgenticGame Studios - Universal Agent First Game Dev AI Game Studios
 
-Indie game development managed through 85 coordinated Claude Code subagents organized into 9 teams.
-Each agent owns a specific domain, enforcing separation of concerns and quality.
+Universal game development framework that transforms ANY AI coding IDE/agent into a full game development studio through our core reference system. 85 coordinated agents organized into 9 teams, accessible across all AI platforms.
 
 ## 🎯 **Agent Architecture Overview**
 
