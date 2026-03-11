@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(git rev-parse*)",
+      "Bash(ls *)",
+      "Bash(dir *)",
+      "Bash(python -m json.tool*)",
+      "Bash(python -m pytest*)",
+      "Bash(py -m pytest*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)",
+      "Bash(sudo *)",
+      "Bash(chmod 777*)",
+      "Bash(*>.env*)",
+      "Bash(cat *.env*)",
+      "Bash(type *.env*)",
+      "Read(**/.env*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-start.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-commit.sh",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-push.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-assets.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/pre-compact.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-stop.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/log-agent.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "references": {
+    "path": "./refenrece",
+    "skillFiles": [
+      "aesthetic-direction-framework/SKILL.md",
+      "architecture-decision/SKILL.md",
+      "asset-audit/SKILL.md",
+      "balance-check/SKILL.md",
+      "brainstorm/SKILL.md",
+      "bug-report/SKILL.md",
+      "changelog/SKILL.md",
+      "claude_skill_unity/SKILL.md",
+      "cocos-creator-dev/SKILL.md",
+      "cocos-skills/SKILL.md",
+      "code-review/SKILL.md",
+      "competitive-analysis/SKILL.md",
+      "core-loop-designer/SKILL.md",
+      "design-coherence-engine/SKILL.md",
+      "design-iteration-tracker/SKILL.md",
+      "design-pillars-architect/SKILL.md",
+      "design-review/SKILL.md",
+      "design-systems/SKILL.md",
+      "doTween-unity/SKILL.md",
+      "economy-progression-designer/SKILL.md",
+      "estimate/SKILL.md",
+      "game-balance-analyst/SKILL.md",
+      "game-market-analyst/SKILL.md",
+      "game-quality-gates/SKILL.md",
+      "game-vision-architect/SKILL.md",
+      "gate-check/SKILL.md",
+      "gdd-author/SKILL.md",
+      "godot/SKILL.md",
+      "high-concept-pitch-writer/SKILL.md",
+      "hotfix/SKILL.md",
+      "launch-checklist/SKILL.md",
+      "level-encounter-planner/SKILL.md",
+      "localize/SKILL.md",
+      "media-pipe-unity-skill/SKILL.md",
+      "milestone-review/SKILL.md",
+      "narrative-systems-designer/SKILL.md",
+      "onboard/SKILL.md",
+      "patch-notes/SKILL.md",
+      "perf-profile/SKILL.md",
+      "player-experience-modeler/SKILL.md",
+      "playtest-protocol-designer/SKILL.md",
+      "playtest-report/SKILL.md",
+      "prime-tween-unity/SKILL.md",
+      "project-stage-detect/SKILL.md",
+      "prototype/SKILL.md",
+      "prototype-scope-definer/SKILL.md",
+      "release-checklist/SKILL.md",
+      "retrospective/SKILL.md",
+      "reverse-document/SKILL.md",
+      "rules-formalizer/SKILL.md",
+      "scope-check/SKILL.md",
+      "scope-feature-prioritizer/SKILL.md",
+      "setup-engine/SKILL.md",
+      "skill-creator/SKILL.md",
+      "sprint-plan/SKILL.md",
+      "start/SKILL.md",
+      "systems-interaction-mapper/SKILL.md",
+      "team-audio/SKILL.md",
+      "team-combat/SKILL.md",
+      "team-level/SKILL.md",
+      "team-narrative/SKILL.md",
+      "team-polish/SKILL.md",
+      "team-release/SKILL.md",
+      "team-ui/SKILL.md",
+      "tech-debt/SKILL.md",
+      "technical-design-bridge/SKILL.md",
+      "ui-ux-systems-designer/SKILL.md",
+      "unity-asset-guidelines/SKILL.md",
+      "unity-asset-guidelines-skill/SKILL.md",
+      "unity-skills/SKILL.md",
+      "world-logic-checker/SKILL.md"
+    ],
+    "agentFiles": [
+      "architect.md",
+      "gameplay-dev.md",
+      "ui-specialist.md",
+      "tool-developer.md",
+      "network-engineer.md",
+      "qa-tester.md",
+      "game-designer.md",
+      "art-director.md",
+      "gameplay-systems-architect.md",
+      "character-controller-specialist.md",
+      "enemy-ai-specialist.md",
+      "inventory-system-specialist.md",
+      "godot-ui-agent.md",
+      "gdscript-code-assistant.md",
+      "godot-export-helper.md",
+      "godot-scene-analyzer.md",
+      "creative-director.md",
+      "technical-director.md",
+      "producer.md",
+      "art-director.md",
+      "audio-director.md",
+      "narrative-director.md",
+      "qa-lead.md",
+      "localization-lead.md",
+      "lead-programmer.md",
+      "gameplay-programmer.md",
+      "engine-programmer.md",
+      "network-programmer.md",
+      "ai-programmer.md",
+      "ui-programmer.md",
+      "tools-programmer.md",
+      "unity-specialist.md",
+      "unity-dots-specialist.md",
+      "unity-addressables-specialist.md",
+      "unity-shader-specialist.md",
+      "unity-ui-specialist.md",
+      "godot-specialist.md",
+      "godot-gdscript-specialist.md",
+      "godot-gdextension-specialist.md",
+      "godot-shader-specialist.md",
+      "unreal-specialist.md",
+      "ue-blueprint-specialist.md",
+      "ue-gas-specialist.md",
+      "ue-replication-specialist.md",
+      "ue-umg-specialist.md",
+      "systems-designer.md",
+      "level-designer.md",
+      "economy-designer.md",
+      "world-builder.md",
+      "writer.md",
+      "live-ops-designer.md",
+      "technical-artist.md",
+      "ux-designer.md",
+      "accessibility-specialist.md",
+      "sound-designer.md",
+      "performance-analyst.md",
+      "devops-engineer.md",
+      "security-engineer.md",
+      "release-manager.md",
+      "community-manager.md",
+      "analytics-engineer.md",
+      "prototyper.md",
+      "cocos-creator-specialist.md",
+      "narrative-game-generator.md",
+      "unity-development-specialist.md",
+      "dotween-animation-specialist.md",
+      "prime-tween-animation-specialist.md",
+      "mediapipe-unity-specialist.md",
+      "skill-creation-specialist.md",
+      "unity-asset-guidelines-specialist.md",
+      "competitive-analysis-specialist.md",
+      "aesthetic-direction-framework.md",
+      "core-loop-designer.md",
+      "design-coherence-engine.md",
+      "game-vision-architect.md",
+      "cocos-skills-automation-expert.md",
+      "unity-skills-automation-expert.md",
+      "game-quality-gates-specialist.md"
+    ]
+  }
+}

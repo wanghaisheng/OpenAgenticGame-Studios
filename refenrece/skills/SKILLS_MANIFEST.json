@@ -1,0 +1,366 @@
+{
+  "totalSkills": 72,
+  "skills": [
+    {
+      "name": "aesthetic-direction-framework",
+      "path": "refenrece/skills/aesthetic-direction-framework",
+      "hasSkillMd": true
+    },
+    {
+      "name": "architecture-decision",
+      "path": "refenrece/skills/architecture-decision",
+      "hasSkillMd": true
+    },
+    {
+      "name": "asset-audit",
+      "path": "refenrece/skills/asset-audit",
+      "hasSkillMd": true
+    },
+    {
+      "name": "balance-check",
+      "path": "refenrece/skills/balance-check",
+      "hasSkillMd": true
+    },
+    {
+      "name": "brainstorm",
+      "path": "refenrece/skills/brainstorm",
+      "hasSkillMd": true
+    },
+    {
+      "name": "bug-report",
+      "path": "refenrece/skills/bug-report",
+      "hasSkillMd": true
+    },
+    {
+      "name": "changelog",
+      "path": "refenrece/skills/changelog",
+      "hasSkillMd": true
+    },
+    {
+      "name": "claude_skill_unity",
+      "path": "refenrece/skills/claude_skill_unity",
+      "hasSkillMd": true
+    },
+    {
+      "name": "cocos-creator-dev",
+      "path": "refenrece/skills/cocos-creator-dev",
+      "hasSkillMd": true
+    },
+    {
+      "name": "cocos-skills",
+      "path": "refenrece/skills/cocos-skills",
+      "hasSkillMd": true
+    },
+    {
+      "name": "code-review",
+      "path": "refenrece/skills/code-review",
+      "hasSkillMd": true
+    },
+    {
+      "name": "competitive-analysis",
+      "path": "refenrece/skills/competitive-analysis",
+      "hasSkillMd": true
+    },
+    {
+      "name": "core-loop-designer",
+      "path": "refenrece/skills/core-loop-designer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "design-coherence-engine",
+      "path": "refenrece/skills/design-coherence-engine",
+      "hasSkillMd": true
+    },
+    {
+      "name": "design-iteration-tracker",
+      "path": "refenrece/skills/design-iteration-tracker",
+      "hasSkillMd": true
+    },
+    {
+      "name": "design-pillars-architect",
+      "path": "refenrece/skills/design-pillars-architect",
+      "hasSkillMd": true
+    },
+    {
+      "name": "design-review",
+      "path": "refenrece/skills/design-review",
+      "hasSkillMd": true
+    },
+    {
+      "name": "design-systems",
+      "path": "refenrece/skills/design-systems",
+      "hasSkillMd": true
+    },
+    {
+      "name": "doTween-unity",
+      "path": "refenrece/skills/doTween-unity",
+      "hasSkillMd": true
+    },
+    {
+      "name": "economy-progression-designer",
+      "path": "refenrece/skills/economy-progression-designer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "estimate",
+      "path": "refenrece/skills/estimate",
+      "hasSkillMd": true
+    },
+    {
+      "name": "game-balance-analyst",
+      "path": "refenrece/skills/game-balance-analyst",
+      "hasSkillMd": true
+    },
+    {
+      "name": "game-market-analyst",
+      "path": "refenrece/skills/game-market-analyst",
+      "hasSkillMd": true
+    },
+    {
+      "name": "game-quality-gates",
+      "path": "refenrece/skills/game-quality-gates",
+      "hasSkillMd": true
+    },
+    {
+      "name": "game-vision-architect",
+      "path": "refenrece/skills/game-vision-architect",
+      "hasSkillMd": true
+    },
+    {
+      "name": "gate-check",
+      "path": "refenrece/skills/gate-check",
+      "hasSkillMd": true
+    },
+    {
+      "name": "gdd-author",
+      "path": "refenrece/skills/gdd-author",
+      "hasSkillMd": true
+    },
+    {
+      "name": "godot",
+      "path": "refenrece/skills/godot",
+      "hasSkillMd": true
+    },
+    {
+      "name": "high-concept-pitch-writer",
+      "path": "refenrece/skills/high-concept-pitch-writer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "hotfix",
+      "path": "refenrece/skills/hotfix",
+      "hasSkillMd": true
+    },
+    {
+      "name": "launch-checklist",
+      "path": "refenrece/skills/launch-checklist",
+      "hasSkillMd": true
+    },
+    {
+      "name": "level-encounter-planner",
+      "path": "refenrece/skills/level-encounter-planner",
+      "hasSkillMd": true
+    },
+    {
+      "name": "localize",
+      "path": "refenrece/skills/localize",
+      "hasSkillMd": true
+    },
+    {
+      "name": "media-pipe-unity-skill",
+      "path": "refenrece/skills/media-pipe-unity-skill",
+      "hasSkillMd": true
+    },
+    {
+      "name": "milestone-review",
+      "path": "refenrece/skills/milestone-review",
+      "hasSkillMd": true
+    },
+    {
+      "name": "narrative-systems-designer",
+      "path": "refenrece/skills/narrative-systems-designer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "onboard",
+      "path": "refenrece/skills/onboard",
+      "hasSkillMd": true
+    },
+    {
+      "name": "patch-notes",
+      "path": "refenrece/skills/patch-notes",
+      "hasSkillMd": true
+    },
+    {
+      "name": "perf-profile",
+      "path": "refenrece/skills/perf-profile",
+      "hasSkillMd": true
+    },
+    {
+      "name": "player-experience-modeler",
+      "path": "refenrece/skills/player-experience-modeler",
+      "hasSkillMd": true
+    },
+    {
+      "name": "playtest-protocol-designer",
+      "path": "refenrece/skills/playtest-protocol-designer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "playtest-report",
+      "path": "refenrece/skills/playtest-report",
+      "hasSkillMd": true
+    },
+    {
+      "name": "prime-tween-unity",
+      "path": "refenrece/skills/prime-tween-unity",
+      "hasSkillMd": true
+    },
+    {
+      "name": "project-stage-detect",
+      "path": "refenrece/skills/project-stage-detect",
+      "hasSkillMd": true
+    },
+    {
+      "name": "prototype",
+      "path": "refenrece/skills/prototype",
+      "hasSkillMd": true
+    },
+    {
+      "name": "prototype-scope-definer",
+      "path": "refenrece/skills/prototype-scope-definer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "release-checklist",
+      "path": "refenrece/skills/release-checklist",
+      "hasSkillMd": true
+    },
+    {
+      "name": "retrospective",
+      "path": "refenrece/skills/retrospective",
+      "hasSkillMd": true
+    },
+    {
+      "name": "reverse-document",
+      "path": "refenrece/skills/reverse-document",
+      "hasSkillMd": true
+    },
+    {
+      "name": "rules-formalizer",
+      "path": "refenrece/skills/rules-formalizer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "scope-check",
+      "path": "refenrece/skills/scope-check",
+      "hasSkillMd": true
+    },
+    {
+      "name": "scope-feature-prioritizer",
+      "path": "refenrece/skills/scope-feature-prioritizer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "setup-engine",
+      "path": "refenrece/skills/setup-engine",
+      "hasSkillMd": true
+    },
+    {
+      "name": "skill-creator",
+      "path": "refenrece/skills/skill-creator",
+      "hasSkillMd": true
+    },
+    {
+      "name": "sprint-plan",
+      "path": "refenrece/skills/sprint-plan",
+      "hasSkillMd": true
+    },
+    {
+      "name": "start",
+      "path": "refenrece/skills/start",
+      "hasSkillMd": true
+    },
+    {
+      "name": "systems-interaction-mapper",
+      "path": "refenrece/skills/systems-interaction-mapper",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-audio",
+      "path": "refenrece/skills/team-audio",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-combat",
+      "path": "refenrece/skills/team-combat",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-level",
+      "path": "refenrece/skills/team-level",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-narrative",
+      "path": "refenrece/skills/team-narrative",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-polish",
+      "path": "refenrece/skills/team-polish",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-release",
+      "path": "refenrece/skills/team-release",
+      "hasSkillMd": true
+    },
+    {
+      "name": "team-ui",
+      "path": "refenrece/skills/team-ui",
+      "hasSkillMd": true
+    },
+    {
+      "name": "tech-debt",
+      "path": "refenrece/skills/tech-debt",
+      "hasSkillMd": true
+    },
+    {
+      "name": "technical-design-bridge",
+      "path": "refenrece/skills/technical-design-bridge",
+      "hasSkillMd": true
+    },
+    {
+      "name": "ui-ux-systems-designer",
+      "path": "refenrece/skills/ui-ux-systems-designer",
+      "hasSkillMd": true
+    },
+    {
+      "name": "unified-agents",
+      "path": "refenrece/skills/unified-agents",
+      "hasSkillMd": false
+    },
+    {
+      "name": "unity-asset-guidelines",
+      "path": "refenrece/skills/unity-asset-guidelines",
+      "hasSkillMd": true
+    },
+    {
+      "name": "unity-asset-guidelines-skill",
+      "path": "refenrece/skills/unity-asset-guidelines-skill",
+      "hasSkillMd": true
+    },
+    {
+      "name": "unity-skills",
+      "path": "refenrece/skills/unity-skills",
+      "hasSkillMd": true
+    },
+    {
+      "name": "world-logic-checker",
+      "path": "refenrece/skills/world-logic-checker",
+      "hasSkillMd": true
+    }
+  ],
+  "generatedAt": "2026-03-09T22:28:10.470Z"
+}
