@@ -366,7 +366,7 @@ This enhanced version by OpenAgenticGame maintains the same MIT license while pr
 When using this enhanced version, please provide attribution to both the original author and the enhanced contributors:
 
 ```text
-Based on "Claude Code Game Studios" by Donchitos (MIT License)
+Based on ["Claude Code Game Studios"](https://github.com/Donchitos/Claude-Code-Game-Studios) by Donchitos (MIT License)
 Enhanced by "OpenAgenticGame" (MIT License)
 ```
 
