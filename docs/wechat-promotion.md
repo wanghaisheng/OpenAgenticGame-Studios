@@ -969,8 +969,9 @@ Agent First → 人类决策 → Agent执行 → 质量保证
 2. **打开你喜欢的AI IDE**：Claude Code、Cursor、Windsurf...
 3. **运行 `/start`**：智能引导，零配置开始
 
-### � **查看实际案例**
-想要看到真实的威力？访问我们的实践项目：
+### 🔥 **查看基于三件套开发的项目案例**
+
+想要看到Agent First三件套的实际威力？访问我们基于这套架构开发的真实项目：
 
 #### 🎮 **结构化游戏设计文档 (GDD)**
 **GitHub**: `https://github.com/wanghaisheng/openagenticgame-gdd`
@@ -978,12 +979,13 @@ Agent First → 人类决策 → Agent执行 → 质量保证
 **核心理念**：用Markdown服务AI Agent，因为MD是AI的一等公民
 
 **项目价值**：
+- **基于三件套开发**：使用OpenAgenticGame的通用参考系统、高级开发层和85个代理
 - 创建了完全结构化的游戏设计文档
 - 使用Markdown格式，AI可直接读取和处理
 - 摒弃传统Word/Excel，拥抱AI原生格式
 - 为Agent First开发理念奠定基础
 
-**实践成果**：
+**开发成果**：
 - ✅ 85个代理协作创建商业级GDD
 - ✅ AI可直接理解和执行文档内容
 - ✅ 跨AI平台完全一致性
@@ -995,12 +997,13 @@ Agent First → 人类决策 → Agent执行 → 质量保证
 **核心理念**：用BMAD方法论调度Agent实现游戏设计文档
 
 **项目价值**：
+- **基于三件套开发**：使用OpenAgenticGame的BMAD高级开发层调度多个代理
 - BMAD方法论调度多个Agent协作
 - 自动化生成完整的游戏设计文档
 - 展示Agent First的实际工作流程
 - 从设计文档到游戏开发的完整链路
 
-**实践成果**：
+**开发成果**：
 - ✅ 企业级开发流程在AI中的实现
 - ✅ 任务分解和里程碑验证
 - ✅ 自动化质量门控
