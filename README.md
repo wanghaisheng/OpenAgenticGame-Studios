@@ -62,7 +62,7 @@ The result: you choose your preferred AI environment, we provide the complete st
 
 | Category | Count | Description |
 |----------|-------|-------------|
-| **Agents** | 85 | Specialized subagents across 9 teams: Leadership, Programming, Design, Art, QA, Production, Publish, Support, and Enhanced |
+| **Agents** | 85 | Specialized agents across 9 teams: Leadership(8), Programming(29), Design(13), Art(11), QA(7), Production(13), Publish(7), Support(2), Enhanced(4) |
 | **Skills** | 72 | Universal slash commands for common workflows (`/start`, `/sprint-plan`, `/code-review`, `/brainstorm`, etc.) |
 | **Rules** | 12 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
 | **Templates** | 28 | Document templates for GDDs, ADRs, sprint plans, economy models, faction design, and more |
@@ -102,49 +102,35 @@ This means you're not locked into a specific AI platform — your studio structu
 Agents are organized into 9 teams, matching how real studios operate:
 
 ```
-Leadership Team (7 agents)
+Leadership Team (8 agents)
   creative-director    technical-director    producer
   art-director         audio-director         narrative-director
-  game-vision-architect
+  game-vision-architect  [additional leadership agents]
 
-Programming Team (28 agents)
+Programming Team (29 agents)
   lead-programmer      gameplay-programmer    engine-programmer
   ai-programmer        network-programmer     ui-programmer
-  tools-programmer     unity-specialist       unity-dots-specialist
-  unity-addressables-specialist  unity-shader-specialist
-  unity-ui-specialist  unity-development-specialist
-  unity-skills-automation  unity-asset-guidelines-specialist
-  godot-specialist     godot-gdscript-specialist  godot-gdextension-specialist
-  godot-shader-specialist  godot-full-stack-specialist
-  unreal-specialist    ue-blueprint-specialist  ue-gas-specialist
-  ue-replication-specialist  ue-umg-specialist
-  cocos-creator-specialist  cocos-skills-automation
-  skill-creation-specialist
+  tools-programmer     [24 additional programming specialists]
 
-Design Team (12 agents)
+Design Team (13 agents)
   game-designer        systems-designer       level-designer
   economy-designer     world-builder          writer
-  live-ops-designer    narrative-game-generator
-  aesthetic-direction-framework  core-loop-designer
-  design-coherence-engine  competitive-analysis-specialist
+  [7 additional design specialists]
 
-Art Team (10 agents)
+Art Team (11 agents)
   technical-artist     ux-designer            accessibility-specialist
-  sound-designer
+  sound-designer        [7 additional art specialists]
 
-Quality Assurance Team (6 agents)
+Quality Assurance Team (7 agents)
   qa-lead              qa-tester              performance-analyst
-  game-quality-gates-specialist  enhanced-qa-tester
-  enhanced-performance-analyst
+  [4 additional QA specialists]
 
-Production Team (12 agents)
+Production Team (13 agents)
   release-manager      localization-lead      community-manager
   analytics-engineer   devops-engineer        security-engineer
-  prototyper           enhanced-release-manager
-  enhanced-community-manager  enhanced-devops-engineer
-  enhanced-security-engineer  enhanced-prototyper
+  [7 additional production specialists]
 
-Publish Team (6 agents)
+Publish Team (7 agents)
   store-submission-specialist  platform-certification-specialist
   release-coordinator  publish-quality-gates  store-page-optimizer
   platform-relationship-manager

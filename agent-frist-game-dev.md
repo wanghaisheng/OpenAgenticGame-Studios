@@ -6,20 +6,24 @@ Any AI IDE. Complete game studio. Instantly. 85 coordinated agents organized int
 
 ### **Agent Statistics**
 - **Total Agents**: 85 (organized into 9 teams)
-- **Engine Specialists**: Unity (8), Godot (5), Unreal (5), Cocos Creator (2)
-- **Cross-Platform**: 65 engine-agnostic agents
-- **Quality Assurance**: 6 QA and quality gates agents
-- **Publish Team**: 6 publishing and platform specialists
-- **DevOps Automation**: 12 production and support agents
+- **Leadership Team**: 8 agents - Strategic direction and vision
+- **Programming Team**: 29 agents - Technical implementation and development
+- **Design Team**: 13 agents - Game design and content creation
+- **Art Team**: 11 agents - Visual arts and user experience
+- **Quality Assurance Team**: 7 agents - Testing and quality control
+- **Production Team**: 13 agents - Project management and operations
+- **Publish Team**: 7 agents - Game publishing and platform management
+- **Support Team**: 2 agents - Analytics and technical support
+- **Enhanced Team**: 4 agents - Advanced capabilities and features
 
 ### **Team Structure**
-- **Leadership Team**: 7 agents - Executive and vision leadership
-- **Programming Team**: 28 agents - Core programming and development
-- **Design Team**: 12 agents - Game and system design
-- **Art Team**: 10 agents - Art direction and technical art
-- **Quality Assurance Team**: 6 agents - Quality assurance and testing
-- **Production Team**: 12 agents - Production and project management
-- **Publish Team**: 6 agents - Game publishing and platform management
+- **Leadership Team**: 8 agents - Executive and vision leadership
+- **Programming Team**: 29 agents - Core programming and development
+- **Design Team**: 13 agents - Game and system design
+- **Art Team**: 11 agents - Art direction and technical art
+- **Quality Assurance Team**: 7 agents - Quality assurance and testing
+- **Production Team**: 13 agents - Production and project management
+- **Publish Team**: 7 agents - Game publishing and platform management
 - **Support Team**: 2 agents - Community, analytics, and support
 - **Enhanced Team**: 4 agents - Enhanced capabilities and advanced features
 
