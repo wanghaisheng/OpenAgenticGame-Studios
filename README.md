@@ -224,42 +224,50 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
 ## Project Structure
 
 ```
-CLAUDE.md                           # Master configuration
-.claude/                            # Claude Code specific configurations
-  settings.json                     # Hooks, permissions, safety rules
-  agents/                           # 85 agent definitions (markdown + YAML frontmatter)
-  skills/                           # 72 slash commands (subdirectory per skill)
-  hooks/                            # 8 hook scripts (bash, cross-platform)
-  rules/                            # 11 path-scoped coding standards
-  docs/
-    quick-start.md                  # Detailed usage guide
-    agent-roster.md                 # Full agent table with domains
-    agent-coordination-map.md       # Delegation and escalation paths
-    setup-requirements.md           # Prerequisites and platform notes
-    templates/                      # 28 document templates
-
-refenrece/                          # 🌟 UNIVERSAL REFERENCE SYSTEM - Core Architecture
-  agents/                          # 85 specialized agent definitions (AI-agnostic)
-  skills/                          # 72 universal skill implementations (AI-agnostic)
-  rules/                           # 12 coding standards and quality rules
-  docs/                            # Comprehensive documentation for all AI platforms
-
-.codex/                             # 🚀 ADVANCED DEVELOPMENT LAYER - BMAD+OpenSpec+Harness
-  workflows/                       # Quick/BMM modes, review, validation, archive workflows
-  core/                            # Task decomposition, milestone design, quality gates
-  templates/                        # Reusable scaffolds for consistent development
-  reference/                        # BMAD/OpenSpec methodology references
-  PROJECT-RULES.md                 # Cross-platform development conventions
-  LESSONS-LEARNED.md               # Project-specific insights and patterns
-
-src/                                # Game source code
-assets/                             # Art, audio, VFX, shaders, data files
-design/                             # GDDs, narrative docs, level designs
-docs/                               # Technical documentation and ADRs
-tests/                              # Test suites
-tools/                              # Build and pipeline tools
-prototypes/                         # Throwaway prototypes (isolated from src/)
-production/                         # Sprint plans, milestones, release tracking
+🌟 Universal Architecture (AI-Platform Agnostic)
+│
+├── refenrece/                          # UNIVERSAL REFERENCE SYSTEM - Core Architecture
+│   ├── agents/                        # 85 specialized agent definitions
+│   ├── skills/                        # 72 universal skill implementations  
+│   ├── rules/                         # 12 coding standards and quality rules
+│   └── docs/                         # Comprehensive documentation for all AI platforms
+│
+├── .codex/                            # ADVANCED DEVELOPMENT LAYER - BMAD+OpenSpec+Harness
+│   ├── workflows/                      # Quick/BMM modes, review, validation workflows
+│   ├── core/                          # Task decomposition, milestone design, quality gates
+│   ├── templates/                      # Reusable scaffolds for consistent development
+│   ├── reference/                      # BMAD/OpenSpec methodology references
+│   ├── PROJECT-RULES.md               # Cross-platform development conventions
+│   └── LESSONS-LEARNED.md             # Project-specific insights and patterns
+│
+🔧 Platform-Specific Configurations
+│
+├── .claude/                           # Claude Code specific configurations
+│   ├── settings.json                   # Hooks, permissions, safety rules
+│   ├── agents/                        # Claude Code agent definitions
+│   ├── skills/                        # Claude Code slash commands
+│   ├── hooks/                         # 8 hook scripts (bash, cross-platform)
+│   ├── rules/                         # 11 path-scoped coding standards
+│   └── docs/
+│       ├── quick-start.md               # Detailed usage guide
+│       ├── agent-roster.md              # Full agent table with domains
+│       ├── agent-coordination-map.md    # Delegation and escalation paths
+│       ├── setup-requirements.md        # Prerequisites and platform notes
+│       └── templates/                 # 28 document templates
+│
+├── .cursor/                          # Cursor specific configurations (if present)
+├── .windsurf/                        # Windsurf specific configurations (if present)
+│
+🎮 Game Development Workspace
+│
+├── src/                               # Game source code
+├── assets/                            # Art, audio, VFX, shaders, data files
+├── design/                            # GDDs, narrative docs, level designs
+├── docs/                              # Technical documentation and ADRs
+├── tests/                             # Test suites
+├── tools/                             # Build and pipeline tools
+├── prototypes/                        # Throwaway prototypes (isolated from src/)
+└── production/                        # Sprint plans, milestones, release tracking
 ```
 
 ## How It Works
