@@ -294,9 +294,13 @@ This is **not** an auto-pilot system. Every agent follows a strict collaboration
 
 You stay in control. The agents provide structure and expertise, not autonomy.
 
-### Automated Safety
+### Platform-Specific Features
 
-**Hooks** run automatically on every session:
+### Claude Code Enhanced Features (Optional)
+
+If you choose to use Claude Code as your AI IDE, we provide enhanced automation features that extend the original reference implementation:
+
+**Automated Hooks** run automatically on every session:
 
 | Hook | Trigger | What It Does |
 |------|---------|--------------|
@@ -311,9 +315,9 @@ You stay in control. The agents provide structure and expertise, not autonomy.
 
 **Permission rules** in `settings.json` auto-allow safe operations (git status, test runs) and block dangerous ones (force push, `rm -rf`, reading `.env` files).
 
-### Path-Scoped Rules
+### Universal Quality Standards
 
-Coding standards are automatically enforced based on file location:
+Regardless of your chosen AI IDE, our universal reference system provides consistent quality enforcement:
 
 | Path | Enforces |
 |------|----------|
@@ -325,6 +329,8 @@ Coding standards are automatically enforced based on file location:
 | `design/gdd/**` | Required 8 sections, formula format, edge cases |
 | `tests/**` | Test naming, coverage requirements, fixture patterns |
 | `prototypes/**` | Relaxed standards, README required, hypothesis documented |
+
+> **Note**: These quality standards are available through our universal reference system (`refenrece/`) and work with ANY AI IDE, not just Claude Code.
 
 ## Design Philosophy
 
