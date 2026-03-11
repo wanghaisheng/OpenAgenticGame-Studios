@@ -1,6 +1,6 @@
 # OpenAgenticGame Studios - Universal Agent First Game Dev AI Game Studios
 
-Universal game development framework that transforms ANY AI coding IDE/agent into a full game development studio through our core reference system. 85 coordinated agents organized into 9 teams, accessible across all AI platforms.
+Any AI IDE. Complete game studio. Instantly. 85 coordinated agents organized into 9 teams, accessible across all AI platforms through our universal reference system.
 
 ## 🎯 **Agent Architecture Overview**
 

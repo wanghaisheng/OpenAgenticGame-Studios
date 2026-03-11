@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">OpenAgenticGame Studios - Universal Agent First Game Dev AI Game Studios</h1>
   <p align="center">
-    Transform any AI coding IDE/agent into a full game development studio.
+    Any AI IDE. Complete game studio. Instantly.
     <br />
     85 agents. 72 skills. 9 teams. Universal agent coordination system.
   </p>
