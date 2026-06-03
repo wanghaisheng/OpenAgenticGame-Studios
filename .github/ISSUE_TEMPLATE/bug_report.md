@@ -12,7 +12,7 @@ A clear description of what the bug is.
 
 ## Steps to Reproduce
 
-1. Open Claude Code in a project using this template
+1. Open Codex in a project using this template
 2. Run `/<skill>` or trigger `<agent>`
 3. ...
 4. See error
@@ -29,7 +29,7 @@ What actually happened. Include any error messages or unexpected output.
 
 - **OS**: (e.g., Windows 10, macOS 14, Ubuntu 24.04)
 - **Shell**: (e.g., Git Bash, zsh, bash)
-- **Claude Code version**: (run `claude --version`)
+- **Codex version**: (run `codex --version`)
 - **Node.js version**: (run `node --version`)
 - **jq installed?**: Yes / No
 - **Python installed?**: Yes / No

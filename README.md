@@ -15,7 +15,7 @@
   <a href="refenrece/skills"><img src="https://img.shields.io/badge/skills-72-green" alt="72 Skills"></a>
   <a href="refenrece/rules"><img src="https://img.shields.io/badge/rules-12-red" alt="12 Rules"></a>
   <a href="docs/qualification"><img src="https://img.shields.io/badge/platforms-6-orange" alt="6 Platforms"></a>
-  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
+  <a href="https://developers.openai.com/codex/"><img src="https://img.shields.io/badge/built%20for-OpenAI%20Codex-111827?logo=openai" alt="Built for OpenAI Codex"></a>
   <a href="https://ko-fi.com/donchitos"><img src="https://img.shields.io/badge/Ko--fi-Support%20this%20project-ff5e5b?logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
 </p>
 
@@ -28,7 +28,7 @@ Building a game solo with AI is powerful — but a single AI session has no stru
 **OpenAgenticGame Studios** revolutionizes AI-assisted game development with three groundbreaking innovations:
 
 ### 🌐 **Universal Architecture**
-We broke free from single-AI limitations. Our **universal reference system** (`refenrece/`) creates an AI-agnostic framework where ANY coding environment — Claude Code, Cursor, Windsurf, or future AI agents — can access the same complete studio infrastructure. You're never locked into one platform.
+We broke free from single-AI limitations. Our **universal reference system** (`refenrece/`) creates an AI-agnostic framework where ANY coding environment — OpenAI Codex, Cursor, Windsurf, or future AI agents — can access the same complete studio infrastructure. You're never locked into one platform.
 
 **Advanced Development Layer**: We've integrated **BMAD + OpenSpec + Harness** methodologies into our `.codex/` folder, creating a sophisticated development framework that brings enterprise-grade workflow management to ANY AI IDE. This includes Quick/BMM modes, task decomposition, milestone validation, and automated quality gates — all portable across AI platforms.
 
@@ -81,7 +81,8 @@ The core innovation of OpenAgenticGame Studios is our **universal reference syst
 - **Extensible Framework**: Easy to add new agents, skills, or integrate with new AI systems
 
 ### Supported AI Environments
-- **Claude Code** (原生支持)
+- **OpenAI Codex** (原生支持：`AGENTS.md` + `.codex/` 工作流)
+- **Claude Code** (legacy compatibility through the universal reference system)
 - **Cursor** (通过参考系统)
 - **Windsurf** (通过参考系统)
 - **Any future AI coding IDE** (通过通用参考架构)
@@ -156,7 +157,7 @@ The template includes agent sets for all four major engines. Use the set that ma
 
 ## Slash Commands
 
-Type `/` in Claude Code to access all 72 skills:
+Use Codex prompts or slash-style task names to invoke the 72 reference skills:
 
 **Reviews & Analysis**
 `/design-review` `/code-review` `/balance-check` `/asset-audit` `/scope-check` `/perf-profile` `/tech-debt`
@@ -181,10 +182,8 @@ Type `/` in Claude Code to access all 72 skills:
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (`npm install -g @anthropic-ai/claude-code`)
-- **Recommended**: [jq](https://jqlang.github.io/jq/) (for hook validation) and Python 3 (for JSON validation)
-
-All hooks fail gracefully if optional tools are missing — nothing breaks, you just lose validation.
+- [OpenAI Codex](https://developers.openai.com/codex/) (`npm install -g @openai/codex`)
+- **Recommended**: [jq](https://jqlang.github.io/jq/) and Python 3 for JSON-aware validation checks selected by `.codex/workflows/validate.md`.
 
 ### Setup
 
@@ -194,9 +193,9 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
    cd my-game
    ```
 
-2. **Open Claude Code** and start a session:
+2. **Open Codex** and start a session:
    ```bash
-   claude
+   codex
    ```
 
 3. **Run `/start`** — the system asks where you are (no idea, vague concept,
@@ -226,23 +225,15 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
 │   ├── PROJECT-RULES.md               # Cross-platform development conventions
 │   └── LESSONS-LEARNED.md             # Project-specific insights and patterns
 │
-🔧 Platform-Specific Configurations
+🔧 Codex-Native Runtime
 │
-├── .claude/                           # Claude Code specific configurations
-│   ├── settings.json                   # Hooks, permissions, safety rules
-│   ├── agents/                        # Claude Code agent definitions
-│   ├── skills/                        # Claude Code slash commands
-│   ├── hooks/                         # 8 hook scripts (bash, cross-platform)
-│   ├── rules/                         # 11 path-scoped coding standards
-│   └── docs/
-│       ├── quick-start.md               # Detailed usage guide
-│       ├── agent-roster.md              # Full agent table with domains
-│       ├── agent-coordination-map.md    # Delegation and escalation paths
-│       ├── setup-requirements.md        # Prerequisites and platform notes
-│       └── templates/                 # 28 document templates
+├── AGENTS.md                          # Codex project instructions and feature mapping
+├── docs/CODEX-MIGRATION.md            # Migration guide from Claude Code to Codex
 │
-├── .cursor/                          # Cursor specific configurations (if present)
-├── .windsurf/                        # Windsurf specific configurations (if present)
+🔌 Optional Platform Adapters
+│
+├── .cursor/                           # Cursor specific configurations (if present)
+├── .windsurf/                         # Windsurf specific configurations (if present)
 │
 🎮 Game Development Workspace
 │
@@ -280,26 +271,19 @@ This is **not** an auto-pilot system. Every agent follows a strict collaboration
 
 You stay in control. The agents provide structure and expertise, not autonomy.
 
-### Platform-Specific Features
+### Codex Native Features
 
-### Claude Code Enhanced Features (Optional)
+Codex is now the primary execution environment. The repo uses `AGENTS.md` plus `.codex/` to expose agentic coding workflows, review loops, validation gates, and reusable templates:
 
-If you choose to use Claude Code as your AI IDE, we provide enhanced automation features that extend the original reference implementation:
+| Codex capability | Repository mapping |
+|------------------|--------------------|
+| Local code editing | Use `AGENTS.md` plus `.codex/workflows/quick.md` for scoped implementation and refactors |
+| Agentic task planning | Use `.codex/workflows/bmm.md` with `.codex/core/work-breakdown.md` and `.codex/core/milestone-design.md` for larger changes |
+| Shell-based validation | Use `.codex/workflows/validate.md` and `.codex/core/validation-matrix.md` to capture evidence before closeout |
+| Multimodal UI/game review | Feed screenshots, mockups, and diagrams to Codex, then route through `.codex/workflows/review.md` |
+| Portable reference loading | Pull agents, skills, rules, and templates from `refenrece/` only when the current task needs them |
 
-**Automated Hooks** run automatically on every session:
-
-| Hook | Trigger | What It Does |
-|------|---------|--------------|
-| `validate-commit.sh` | `git commit` | Checks for hardcoded values, TODO format, JSON validity, design doc sections |
-| `validate-push.sh` | `git push` | Warns on pushes to protected branches |
-| `validate-assets.sh` | File writes in `assets/` | Validates naming conventions and JSON structure |
-| `session-start.sh` | Session open | Loads sprint context and recent git activity |
-| `detect-gaps.sh` | Session open | Detects fresh projects (suggests `/start`) and missing documentation when code/prototypes exist |
-| `pre-compact.sh` | Context compression | Preserves session progress notes |
-| `session-stop.sh` | Session close | Logs accomplishments |
-| `log-agent.sh` | Agent spawned | Audit trail of all subagent invocations |
-
-**Permission rules** in `settings.json` auto-allow safe operations (git status, test runs) and block dangerous ones (force push, `rm -rf`, reading `.env` files).
+See `docs/CODEX-MIGRATION.md` for the migration from Claude Code-specific hooks/settings to Codex-native instructions and workflow gates.
 
 ### Universal Quality Standards
 
@@ -316,7 +300,7 @@ Regardless of your chosen AI IDE, our universal reference system provides consis
 | `tests/**` | Test naming, coverage requirements, fixture patterns |
 | `prototypes/**` | Relaxed standards, README required, hypothesis documented |
 
-> **Note**: These quality standards are available through our universal reference system (`refenrece/`) and work with ANY AI IDE, not just Claude Code.
+> **Note**: These quality standards are available through our universal reference system (`refenrece/`) and work with ANY AI IDE, while Codex is the native default.
 
 ## Design Philosophy
 
@@ -336,12 +320,12 @@ This is a **template**, not a locked framework. Everything is meant to be custom
 - **Edit agent prompts** — tune agent behavior, add project-specific knowledge
 - **Modify skills** — adjust workflows to match your team's process
 - **Add rules** — create new path-scoped rules for your project's directory structure
-- **Tune hooks** — adjust validation strictness, add new checks
+- **Tune Codex gates** — adjust validation strictness, add new checks under `.codex/core/`
 - **Pick your engine** — use the Godot, Unity, or Unreal agent set (or none)
 
 ## Platform Support
 
-Tested on **Windows 10** with Git Bash. All hooks use POSIX-compatible patterns (`grep -E`, not `grep -P`) and include fallbacks for missing tools. Works on macOS and Linux without modification.
+Codex and the repository workflow docs are intended for macOS, Linux, and Windows via WSL or Git Bash. Keep validation commands POSIX-friendly where possible.
 
 ## Community
 

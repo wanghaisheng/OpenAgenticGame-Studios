@@ -1,10 +1,10 @@
-# Claude Code Game Studios -- Complete Workflow Guide
+# OpenAgenticGame Studios -- Codex Workflow Guide
 
 > **How to go from zero to a shipped game using the Agent Architecture.**
 >
 > This guide walks you through every phase of game development using the
-> 48-agent system, 36 slash commands, and automated hooks. It assumes you
-> have Claude Code installed and are working from the project root.
+> 85-agent system, 72 reference skills, and Codex workflow gates. It assumes you
+> have OpenAI Codex installed and are working from the project root.
 
 ---
 
@@ -33,10 +33,10 @@
 
 Before you start, make sure you have:
 
-- **Claude Code** installed and working
+- **OpenAI Codex** installed and working
 - **Git** with Git Bash (Windows) or standard terminal (Mac/Linux)
-- **jq** (optional but recommended -- hooks fall back to `grep` if missing)
-- **Python 3** (optional -- some hooks use it for JSON validation)
+- **jq** (optional but recommended for JSON-aware checks)
+- **Python 3** (optional for project validation scripts)
 
 ### Step 0.1: Clone and Configure
 
@@ -61,7 +61,7 @@ a game concept and engine decision.
 
 ### Step 0.3: Choose Your Engine
 
-Run `/setup-engine` in Claude Code. This is the single most important
+Run `/setup-engine` in Codex. This is the single most important
 configuration step -- it tells every agent what engine, language, and toolchain
 you're using:
 
@@ -74,8 +74,8 @@ based on your game's needs (2D/3D, platforms, team size, language preferences).
 
 **What `/setup-engine` does:**
 
-- Pins the engine and version in `CLAUDE.md`
-- Populates `.claude/docs/technical-preferences.md` with naming conventions,
+- Pins the engine and version in `AGENTS.md`
+- Populates `docs/engine-reference/` and project technical notes with naming conventions,
   performance budgets, and engine-specific defaults
 - Detects knowledge gaps (engine version newer than LLM training data) and
   fetches current docs from the web so agents suggest correct APIs
@@ -88,27 +88,24 @@ become your go-to experts. The Unity and Unreal specialists remain available
 but won't be primary.
 
 > **Manual alternative:** You can also edit the Technology Stack section in
-> `CLAUDE.md` directly if you prefer.
+> `AGENTS.md` directly if you prefer.
 
-### Step 0.3: Verify Hooks Are Working
+### Step 0.3: Verify Codex Context Loading
 
-Start a new Claude Code session. You should see output from the
-`session-start.sh` hook:
+Start a new Codex session from the repository root and ask it to read:
 
 ```
-=== Claude Code Game Studios -- Session Context ===
-Branch: main
-Recent commits:
-  abc1234 Initial commit
-===================================
+AGENTS.md
+.codex/README.md
+.codex/workflows/router.md
 ```
 
-If you see this, hooks are working. If not, check `.claude/settings.json` to
-make sure the hook paths are correct for your OS.
+Codex should route the task to Quick or BMM, then load only the relevant agents,
+skills, rules, templates, and validation gates for the current request.
 
 ### Step 0.4: Create Your Directory Structure
 
-The directories listed in `CLAUDE.md` don't all exist yet. Create them as
+The directories listed in `AGENTS.md` don't all exist yet. Create them as
 needed -- the system expects this layout:
 
 ```
@@ -209,8 +206,8 @@ Agent: [Creates structured concept document with top ideas, target audience,
 Take the brainstorm output and formalize it. Use the **game concept template**:
 
 ```
-Ask Claude to create a game concept document using the template at
-.claude/docs/templates/game-concept.md
+Ask Codex to create a game concept document using the template at
+refenrece/docs/templates/game-concept.md
 ```
 
 This template includes:
@@ -228,8 +225,8 @@ Before you go further, lock in your **game pillars** -- the 3-5 non-negotiable
 design values that guide every decision. Use the template:
 
 ```
-Ask Claude to create a game pillars document using the template at
-.claude/docs/templates/game-pillars.md
+Ask Codex to create a game pillars document using the template at
+refenrece/docs/templates/game-pillars.md
 ```
 
 Example pillars:
@@ -282,11 +279,11 @@ For each major system in your game, create a design document in `design/gdd/`.
 Use the template:
 
 ```
-Ask Claude to create a GDD using the template at
-.claude/docs/templates/game-design-document.md
+Ask Codex to create a GDD using the template at
+refenrece/docs/templates/game-design-document.md
 ```
 
-**The `design-docs` rule** (`.claude/rules/design-docs.md`) requires every GDD
+**The `design-docs` rule** (`refenrece/rules/design-docs.md`) requires every GDD
 to have these 8 sections:
 
 | # | Section | What Goes Here |
@@ -393,7 +390,7 @@ If your game has story, lore, or dialogue, this is when you build it:
 3. **Character sheets** -- Use the `narrative-character-sheet.md` template
    for each major character
 
-The `narrative` rule (`.claude/rules/narrative.md`) enforces:
+The `narrative` rule (`refenrece/rules/narrative.md`) enforces:
 - Lore consistency across documents
 - Canon levels (Core Canon vs Flavor vs Apocrypha)
 - Character voice profiles
@@ -467,8 +464,8 @@ Agent: [Creates comprehensive ADR]
 Define your project milestones using the template:
 
 ```
-Ask Claude to create a milestone definition using the template at
-.claude/docs/templates/milestone-definition.md
+Ask Codex to create a milestone definition using the template at
+refenrece/docs/templates/milestone-definition.md
 ```
 
 Typical indie milestones:
@@ -545,7 +542,7 @@ User: "Yes"
 Agent: [Creates directory structure, README with hypothesis/criteria/status,
        delegates to prototyper agent for minimal implementation]
 
-**Key rule:** The `prototype-code` rule (`.claude/rules/prototype-code.md`)
+**Key rule:** The `prototype-code` rule (`refenrece/rules/prototype-code.md`)
 intentionally relaxes coding standards for prototypes - hardcoded values OK,
 no tests required, but README with hypothesis and findings is mandatory.
 
@@ -643,13 +640,13 @@ Agent: [Creates sprint plan with goal, categorized tasks, 20hr capacity estimate
 Each session follows this pattern:
 
 ```
-1. Start a Claude Code session
-   (session-start hook shows branch, sprint status, recent commits)
+1. Start a Codex session
+   (ask Codex to read `AGENTS.md`, `.codex/README.md`, and the router)
 
 2. Pick a task from the sprint plan
    ("I'm working on the combat damage calculation system")
 
-3. Claude identifies the right agent(s) to help
+3. Codex identifies the right agent(s) to help
    - game-designer if the design needs work
    - gameplay-programmer for implementation
    - systems-designer for formula details
@@ -659,8 +656,7 @@ Each session follows this pattern:
 5. Write tests (verification-driven development)
 
 6. Commit your work
-   (validate-commit hook checks for design doc references,
-    valid JSON data, no hardcoded values)
+   (run the validation checks selected by `.codex/workflows/validate.md`)
 
 7. Repeat until the session's context is getting full (~65-70%)
 
@@ -733,7 +729,7 @@ This produces a comprehensive report:
 ### What Happens in This Phase
 
 This is where code gets written. The agent system ensures code quality through
-path-specific rules, automated hooks, and structured delegation.
+path-specific rules, Codex validation gates, and structured delegation.
 
 ### Step 5.1: Single-System Implementation
 
@@ -1002,7 +998,7 @@ test-driven development with automated enforcement.
 The project enforces **verification-driven development**: write tests before
 or alongside implementation, not after.
 
-The `test-standards` rule (`.claude/rules/test-standards.md`) enforces:
+The `test-standards` rule (`refenrece/rules/test-standards.md`) enforces:
 - Test naming: `test_[system]_[scenario]_[expected_result]`
 - Structure: Arrange / Act / Assert
 - No external state dependencies
@@ -1572,8 +1568,7 @@ Agent: "Launch approved. Deployment begins 12:00 UTC tomorrow. I'll monitor and
 
 ### Step 9.5: Ship
 
-The `validate-push` hook will warn you when pushing to `main` or `develop`.
-This is intentional -- release pushes should be deliberate:
+Before pushing to `main` or `develop`, run the Codex validation workflow and make the release push deliberate:
 
 ```
 git tag v1.0.0
@@ -1604,8 +1599,8 @@ This bypasses normal sprint processes with a full audit trail:
 After launch dust settles:
 
 ```
-Ask Claude to create a post-mortem using the template at
-.claude/docs/templates/post-mortem.md
+Ask Codex to create a post-mortem using the template at
+refenrece/docs/templates/post-mortem.md
 ```
 
 This covers:
@@ -1748,7 +1743,7 @@ conflicts go to `producer`.
 4. Start implementing with gameplay-programmer / engine-programmer
 5. /code-review after each major feature
 6. Write tests alongside code
-7. Commit frequently (hooks validate automatically)
+7. Commit frequently after running the relevant Codex validation checks
 ```
 
 ### Workflow 3: "I need to add a complex feature"
@@ -1831,7 +1826,7 @@ conflicts go to `producer`.
    delta time, accessibility, etc.).
 
 4. **Compact proactively.** At ~65-70% context usage, compact or `/clear`.
-   The pre-compact hook saves your progress. Don't wait until you're at the
+   Write a short progress note before compacting. Don't wait until you're at the
    limit.
 
 5. **Use the right tier of agent.** Don't ask `creative-director` to write a
